@@ -2867,7 +2867,7 @@ func TestMonitorGatewayzAccounts(t *testing.T) {
 		if n := len(og.Accounts); n != gwAccountsLimit {
 			t.Fatalf("mode=%v - Expected accounts list to be limited to %v, got %v", pollMode, gwAccountsLimit, n)
 		}
-		// Ask for a given limit, make sure that we don't need to specify "includ accounts" option.
+		// Ask for a given limit, make sure that we don't need to specify "include accounts" option.
 		limit := gwAccountsLimit - 3
 		g = pollGatewayz(t, sa, pollMode, fmt.Sprintf(gatewayzURL+"?accs_limit=%d", limit),
 			&GatewayzOptions{AccountsLimit: limit})
